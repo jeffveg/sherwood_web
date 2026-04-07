@@ -975,6 +975,23 @@ ul {
 .footer-contact a:hover {
     color: var(--orange);
 }
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    margin: 0.75rem 0 0.25rem;
+}
+.footer-social a {
+    color: var(--gold);
+    font-family: var(--font-nav);
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+}
+.footer-social a:hover {
+    color: var(--orange);
+}
+
 .footer-nav {
     display: flex;
     flex-wrap: wrap;
@@ -982,6 +999,51 @@ ul {
     gap: 0.3rem 0.75rem;
     margin: 1.25rem 0;
     list-style: none;
+}
+
+/* Audience landing page cards */
+.audience-section {
+    background: var(--green-dark);
+    padding: 4rem 1.5rem;
+    border-top: 1px solid rgba(70,36,12,0.4);
+    border-bottom: 1px solid rgba(70,36,12,0.4);
+}
+.audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+.audience-card {
+    background: var(--card-bg);
+    border: 1px solid var(--brown);
+    border-radius: 10px;
+    padding: 1.75rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: border-color 0.2s, transform 0.2s;
+}
+.audience-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+.audience-card .audience-icon {
+    font-size: 2.2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+}
+.audience-card h3 {
+    font-family: var(--font-heading);
+    color: var(--gold);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+.audience-card p {
+    color: var(--light);
+    font-family: var(--font-sub);
+    font-size: 0.88rem;
+    line-height: 1.5;
 }
 .footer-nav a {
     color: var(--orange);
