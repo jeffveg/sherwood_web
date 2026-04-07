@@ -485,6 +485,25 @@ ul {
     border-top: 1px solid var(--brown);
     padding-top: 0.75rem;
 }
+.service-card .price-tag {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--orange);
+    border-top: none;
+    padding-top: 0.25rem;
+    margin-top: 0.25rem;
+}
+
+.trademark-notice {
+    text-align: center;
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.35);
+    font-family: var(--font-sub);
+    margin-top: 2rem;
+}
+.trademark-notice a {
+    color: rgba(255,255,255,0.45);
+}
 
 
 /* =========================================================
