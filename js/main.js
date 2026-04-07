@@ -13,7 +13,7 @@
             navToggle.setAttribute('aria-expanded', String(isOpen));
         });
 
-        // Close nav when any link inside it is clicked
+        // Close nav when any link/anchor inside it is clicked (mobile)
         navLinks.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 navLinks.classList.remove('open');
@@ -22,44 +22,49 @@
         });
     }
 
-    // ── Outlaw's Camp dropdown (click/touch-friendly) ──────
-    var outlawsToggle = document.getElementById('outlawsToggle');
-    if (outlawsToggle) {
-        var dropdown = outlawsToggle.closest('.dropdown');
-
-        outlawsToggle.addEventListener('click', function (e) {
-            e.stopPropagation();
-            var isOpen = dropdown.classList.toggle('open');
-            outlawsToggle.setAttribute('aria-expanded', String(isOpen));
-        });
-
-        // Keyboard: open on Enter/Space
-        outlawsToggle.addEventListener('keydown', function (e) {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                outlawsToggle.click();
-            }
-        });
-
-        // Close when clicking outside
-        document.addEventListener('click', function () {
-            if (dropdown.classList.contains('open')) {
-                dropdown.classList.remove('open');
-                outlawsToggle.setAttribute('aria-expanded', 'false');
-            }
+    // ── Generic dropdown handler (handles all dropdowns) ───
+    function closeAllDropdowns(except) {
+        document.querySelectorAll('.dropdown.open').forEach(function (d) {
+            if (d === except) return;
+            d.classList.remove('open');
+            var btn = d.querySelector('[aria-haspopup="true"]');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
         });
     }
 
-    // ── Mark current page in nav ───────────────────────────
-    var currentPath = window.location.pathname.replace(/\/$/, '');
-    document.querySelectorAll('.nav-links a.nav-btn').forEach(function (link) {
-        var linkPath = link.getAttribute('href');
-        if (!linkPath) return;
-        // Handle root index
-        if ((currentPath === '' || currentPath.endsWith('/')) && linkPath === 'index.html') return;
-        if (currentPath.endsWith(linkPath.replace(/^\//, ''))) {
-            link.style.background = 'var(--orange)';
-            link.style.color = 'var(--green)';
+    document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+        var toggle = dropdown.querySelector('[aria-haspopup="true"]');
+        if (!toggle) return;
+
+        toggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            var isOpen = dropdown.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', String(isOpen));
+            // Close any other open dropdown
+            closeAllDropdowns(isOpen ? dropdown : null);
+        });
+
+        // Keyboard accessibility
+        toggle.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') {
+                dropdown.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+                toggle.focus();
+            }
+        });
+    });
+
+    // Close all dropdowns when clicking outside
+    document.addEventListener('click', function () {
+        closeAllDropdowns(null);
+    });
+
+    // ── Highlight current page link ────────────────────────
+    var path = window.location.pathname.split('/').pop() || 'index.html';
+    document.querySelectorAll('.nav-links a').forEach(function (link) {
+        var href = (link.getAttribute('href') || '').split('/').pop();
+        if (href && href === path && !link.classList.contains('nav-cta')) {
+            link.style.color = 'var(--gold)';
         }
     });
 

@@ -16,25 +16,39 @@
 
 <nav class="site-nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="/" aria-label="Sherwood Adventure — Home">
+    <a href="/" class="nav-brand" aria-label="Sherwood Adventure — Home">
       <img src="../images/logo.png" alt="Sherwood Adventure" class="nav-logo" width="160" height="48">
     </a>
-    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">&#9776;</button>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+
     <ul class="nav-links" id="navLinks" role="list">
-      <li><a href="../book-an-adventure.html" class="nav-btn primary">Book Your Adventure</a></li>
-      <li><a href="../upcoming-events.html" class="nav-btn">Upcoming Events</a></li>
-      <li><a href="../host-a-tournament.html" class="nav-btn">Host a Tournament</a></li>
-      <li><a href="https://app.sherwoodadventure.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Current Tournaments</a></li>
-      <li><a href="../vendor/" class="nav-btn">Festival &amp; Large Events</a></li>
-      <li><a href="../contact.html" class="nav-btn">Contact Us</a></li>
       <li class="dropdown">
-        <button class="nav-btn dropdown-label" id="outlawsToggle" aria-expanded="false" aria-haspopup="true">Outlaw&#39;s Camp &#9660;</button>
-        <ul class="dropdown-menu" id="outlawsMenu" role="menu">
-          <li role="none"><a href="../email-signup.html" class="nav-btn" role="menuitem">Golden Arrow Email List</a></li>
-          <li role="none"><a href="../documents.html" class="nav-btn" role="menuitem">Documents</a></li>
-          <li role="none"><a href="../terms.html" class="nav-btn" role="menuitem">Terms &amp; Conditions</a></li>
+        <button class="nav-link" id="eventsToggle" aria-expanded="false" aria-haspopup="true">Events &#9660;</button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="../upcoming-events.html" role="menuitem">Upcoming Events</a></li>
+          <li><a href="../vendor/" role="menuitem">Festival &amp; Large Events</a></li>
         </ul>
       </li>
+      <li class="dropdown">
+        <button class="nav-link" id="tournamentsToggle" aria-expanded="false" aria-haspopup="true">Tournaments &#9660;</button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="../host-a-tournament.html" role="menuitem">Host a Tournament</a></li>
+          <li><a href="https://app.sherwoodadventure.com" role="menuitem" target="_blank" rel="noopener noreferrer">Current Tournaments &#8599;</a></li>
+        </ul>
+      </li>
+      <li><a href="../contact.html" class="nav-link">Contact</a></li>
+      <li class="dropdown">
+        <button class="nav-link" id="moreToggle" aria-expanded="false" aria-haspopup="true">More &#9660;</button>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="../email-signup.html" role="menuitem">Golden Arrow Email List</a></li>
+          <li><a href="../documents.html" role="menuitem">Documents</a></li>
+          <li><a href="../terms.html" role="menuitem">Terms &amp; Conditions</a></li>
+        </ul>
+      </li>
+      <li><a href="../book-an-adventure.html" class="nav-cta">Book Your Adventure</a></li>
     </ul>
   </div>
 </nav>
