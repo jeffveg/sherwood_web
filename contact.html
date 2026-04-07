@@ -95,11 +95,19 @@
     If you have a specific date in mind, go ahead and include it — it helps us check availability faster.
   </p>
 
-  <!-- Contact form — powered by Formspree.
-       TODO: Sign up at formspree.io, create a form, and replace YOUR_FORM_ID below.
-       Free tier allows 50 submissions/month. -->
+  <script>
+    (function() {
+      var p = new URLSearchParams(window.location.search);
+      if (p.get('sent') === '1') {
+        document.write('<div class="info-box" style="border-color:var(--gold);margin-bottom:1.5rem;"><p><strong style="color:var(--gold);">Message sent!</strong> We\'ll get back to you within one business day.</p></div>');
+      } else if (p.get('error') === '1') {
+        document.write('<div class="info-box" style="border-color:#c0392b;margin-bottom:1.5rem;"><p><strong style="color:#e74c3c;">Something went wrong.</strong> Please check your name, email, and message, then try again.</p></div>');
+      }
+    })();
+  </script>
+
   <form class="contact-form"
-        action="https://formspree.io/f/YOUR_FORM_ID"
+        action="contact-handler.php"
         method="POST">
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
