@@ -505,6 +505,21 @@ ul {
     color: rgba(255,255,255,0.45);
 }
 
+.press-mention {
+    text-align: center;
+    font-size: 0.8rem;
+    font-family: var(--font-sub);
+    color: rgba(255,255,255,0.45);
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+.press-mention a {
+    color: var(--gold);
+    text-decoration: none;
+}
+.press-mention a:hover {
+    text-decoration: underline;
+}
 
 /* =========================================================
    VIDEO SECTION
