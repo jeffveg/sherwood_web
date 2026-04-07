@@ -1,0 +1,33 @@
+<!-- SHARED NAV — copy this block into every inner page.
+     Adjust the href values with ../ prefix for pages inside subdirectories (e.g. vendor/index.html).
+     The current page link will highlight automatically via main.js. -->
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" aria-label="Sherwood Adventure — Home">
+      <img src="images/logo.png" alt="Sherwood Adventure" class="nav-logo" width="160" height="48">
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">
+      &#9776;
+    </button>
+
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="book-an-adventure.html" class="nav-btn primary">Book Your Adventure</a></li>
+      <li><a href="upcoming-events.html" class="nav-btn">Upcoming Events</a></li>
+      <li><a href="host-a-tournament.html" class="nav-btn">Host a Tournament</a></li>
+      <li><a href="https://app.sherwoodadventure.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Current Tournaments</a></li>
+      <li><a href="vendor/" class="nav-btn">Festival &amp; Large Events</a></li>
+      <li><a href="contact.html" class="nav-btn">Contact Us</a></li>
+      <li class="dropdown">
+        <button class="nav-btn dropdown-label" id="outlawsToggle" aria-expanded="false" aria-haspopup="true">
+          Outlaw&#39;s Camp &#9660;
+        </button>
+        <ul class="dropdown-menu" id="outlawsMenu" role="menu">
+          <li role="none"><a href="email-signup.html" class="nav-btn" role="menuitem">Golden Arrow Email List</a></li>
+          <li role="none"><a href="documents.html" class="nav-btn" role="menuitem">Documents</a></li>
+          <li role="none"><a href="terms.html" class="nav-btn" role="menuitem">Terms &amp; Conditions</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>

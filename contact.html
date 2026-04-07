@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Sherwood Adventure — Mobile Archery Tag Phoenix AZ</title>
+<meta name="description" content="Contact Sherwood Adventure to book mobile archery tag for your event in the Phoenix Metro area. Call, email, or send us a message — we respond quickly.">
+<meta name="robots" content="index, follow">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="canonical" href="https://sherwoodadventure.com/contact.html">
+<link rel="preload" href="css/DancingScript-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="css/Lustria-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" aria-label="Sherwood Adventure — Home">
+      <img src="images/logo.png" alt="Sherwood Adventure" class="nav-logo" width="160" height="48">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Toggle menu">&#9776;</button>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="book-an-adventure.html" class="nav-btn primary">Book Your Adventure</a></li>
+      <li><a href="upcoming-events.html" class="nav-btn">Upcoming Events</a></li>
+      <li><a href="host-a-tournament.html" class="nav-btn">Host a Tournament</a></li>
+      <li><a href="https://app.sherwoodadventure.com" class="nav-btn" target="_blank" rel="noopener noreferrer">Current Tournaments</a></li>
+      <li><a href="vendor/" class="nav-btn">Festival &amp; Large Events</a></li>
+      <li><a href="contact.html" class="nav-btn">Contact Us</a></li>
+      <li class="dropdown">
+        <button class="nav-btn dropdown-label" id="outlawsToggle" aria-expanded="false" aria-haspopup="true">Outlaw&#39;s Camp &#9660;</button>
+        <ul class="dropdown-menu" id="outlawsMenu" role="menu">
+          <li role="none"><a href="email-signup.html" class="nav-btn" role="menuitem">Golden Arrow Email List</a></li>
+          <li role="none"><a href="documents.html" class="nav-btn" role="menuitem">Documents</a></li>
+          <li role="none"><a href="terms.html" class="nav-btn" role="menuitem">Terms &amp; Conditions</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<header class="page-header">
+  <h1>Contact Us</h1>
+  <p class="page-subtitle">We respond quickly — usually within one business day</p>
+</header>
+
+<main class="content-body">
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-bottom: 2.5rem;">
+    <div class="info-box" style="text-align: center;">
+      <p style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem;">Call or Text</p>
+      <p><a href="tel:6232272233" style="color: var(--orange); font-size: 1.3rem; font-family: var(--font-nav);">623-227-2233</a></p>
+    </div>
+    <div class="info-box" style="text-align: center;">
+      <p style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem;">Email</p>
+      <p><a href="mailto:admin@sherwoodadventure.com" style="color: var(--orange); font-family: var(--font-nav); font-size: 0.95rem;">admin@sherwoodadventure.com</a></p>
+    </div>
+    <div class="info-box" style="text-align: center;">
+      <p style="font-family: var(--font-heading); font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem;">Service Area</p>
+      <p style="font-size: 0.9rem;">Phoenix Metro &amp; Southwest Valley, AZ</p>
+    </div>
+  </div>
+
+  <h2>Send Us a Message</h2>
+  <p>
+    Fill out the form below and we will get back to you as soon as possible.
+    If you have a specific date in mind, go ahead and include it — it helps us check availability faster.
+  </p>
+
+  <!-- Contact form — powered by Formspree.
+       TODO: Sign up at formspree.io, create a form, and replace YOUR_FORM_ID below.
+       Free tier allows 50 submissions/month. -->
+  <form class="contact-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST">
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+      <div class="form-group">
+        <label for="name">Your Name *</label>
+        <input type="text" id="name" name="name" required autocomplete="name" placeholder="Jane Smith">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required autocomplete="email" placeholder="jane@example.com">
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem;">
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="602-555-0100">
+      </div>
+      <div class="form-group">
+        <label for="event-date">Event Date (if known)</label>
+        <input type="date" id="event-date" name="event-date">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="event-type">Type of Event</label>
+      <select id="event-type" name="event-type">
+        <option value="" disabled selected>Select one...</option>
+        <option value="church">Church / Youth Group</option>
+        <option value="corporate">Corporate / Team Building</option>
+        <option value="birthday">Birthday Party</option>
+        <option value="festival">Festival / Large Event</option>
+        <option value="tournament">Tournament</option>
+        <option value="school">School / Community Event</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" required
+        placeholder="Tell us about your event — location, group size, any questions you have..."></textarea>
+    </div>
+
+    <!-- Honeypot spam filter -->
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_subject" value="New contact from SherwoodAdventure.com">
+
+    <div>
+      <button type="submit" class="btn btn-gold">Send Message</button>
+    </div>
+
+  </form>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <picture>
+      <source srcset="images/logo.webp" type="image/webp">
+      <img src="images/logo.png" alt="Sherwood Adventure" class="footer-logo" width="200" height="107">
+    </picture>
+    <p class="footer-contact">
+      <a href="tel:6232272233">623-227-2233</a> &nbsp;|&nbsp;
+      <a href="mailto:admin@sherwoodadventure.com">admin@sherwoodadventure.com</a>
+    </p>
+    <nav aria-label="Footer navigation">
+      <ul class="footer-nav">
+        <li><a href="book-an-adventure.html">Book Your Adventure</a></li>
+        <li><a href="upcoming-events.html">Upcoming Events</a></li>
+        <li><a href="host-a-tournament.html">Host a Tournament</a></li>
+        <li><a href="https://app.sherwoodadventure.com" target="_blank" rel="noopener">Current Tournaments</a></li>
+        <li><a href="vendor/">Festival &amp; Large Events</a></li>
+        <li><a href="email-signup.html">Email Signup</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+    <p class="footer-copy">&copy; 2025 Sherwood Adventure LLC &mdash; All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
