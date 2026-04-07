@@ -505,6 +505,11 @@ ul {
     margin-top: 2rem;
 }
 
+.video-single {
+    max-width: 720px;
+    margin: 2rem auto 0;
+}
+
 .video-embed {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 */
@@ -784,6 +789,42 @@ ul {
 .doc-list li a[href$=".jpg"]::before,
 .doc-list li a[href$=".png"]::before {
     content: '🖼️';
+}
+
+/* Tournament capacity table */
+.table-scroll {
+    overflow-x: auto;
+    margin-top: 1.25rem;
+    border-radius: 8px;
+    border: 1px solid var(--brown);
+}
+.tournament-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-sub);
+    font-size: 0.88rem;
+    color: var(--light);
+    white-space: nowrap;
+}
+.tournament-table th {
+    background: var(--brown);
+    color: var(--gold);
+    font-weight: 700;
+    padding: 0.6rem 0.9rem;
+    text-align: left;
+}
+.tournament-table td {
+    padding: 0.5rem 0.9rem;
+    border-bottom: 1px solid rgba(70, 36, 12, 0.4);
+}
+.tournament-table tbody tr:last-child td {
+    border-bottom: none;
+}
+.tournament-table tbody tr:nth-child(even) {
+    background: rgba(255,255,255,0.04);
+}
+.tournament-table tbody tr:hover {
+    background: rgba(254, 214, 17, 0.06);
 }
 
 /* Contact form */
