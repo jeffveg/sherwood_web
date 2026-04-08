@@ -48,20 +48,21 @@
 }
 
 :root {
-    --green:         #05290b;
-    --green-dark:    #031a07;
-    --green-overlay: rgba(5, 41, 10, 0.68);
-    --green-deep:    rgba(3, 26, 7, 0.82);
-    --gold:          #fed611;
-    --orange:        #ffa133;
-    --brown:         #46240c;
-    --light:         #dfdfdf;
-    --card-bg:       #27292a;
+    /* Local aliases — values defined in brand.css */
+    --green:         var(--sw-green);
+    --green-dark:    var(--sw-green-dark);
+    --green-overlay: var(--sw-green-overlay);
+    --green-deep:    var(--sw-green-deep);
+    --gold:          var(--sw-gold);
+    --orange:        var(--sw-orange);
+    --brown:         var(--sw-brown);
+    --light:         var(--sw-light);
+    --card-bg:       var(--sw-charcoal);
 
-    --font-heading: 'Dancing Script', cursive;
-    --font-sub:     'EB Garamond', serif;
-    --font-nav:     'Lustria', serif;
-    --font-body:    'Lato', sans-serif;
+    --font-heading:  var(--sw-font-heading);
+    --font-sub:      var(--sw-font-sub);
+    --font-nav:      var(--sw-font-nav);
+    --font-body:     var(--sw-font-body);
 }
 
 html {

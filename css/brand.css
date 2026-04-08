@@ -1,0 +1,49 @@
+/* =========================================================
+   Sherwood Adventure — Brand Design Tokens
+   Served at: sherwoodadventure.com/css/brand.css
+   Import this in any Sherwood project to share the brand.
+
+   All tokens use the --sw- prefix (Sherwood).
+   Each project maps these to its own local variable names.
+   ========================================================= */
+
+:root {
+    /* --- Core Colors --- */
+    --sw-green:          #05290b;
+    --sw-green-dark:     #031a07;
+    --sw-green-overlay:  rgba(5, 41, 10, 0.68);
+    --sw-green-deep:     rgba(3, 26, 7, 0.82);
+    --sw-gold:           #fed611;
+    --sw-orange:         #ffa133;
+    --sw-brown:          #46240c;
+    --sw-teal:           #149cb3;
+
+    /* --- Neutrals --- */
+    --sw-charcoal:       #27292a;
+    --sw-charcoal-lt:    #3a3c3d;
+    --sw-light:          #dfdfdf;
+    --sw-white:          #ffffff;
+    --sw-black:          #111111;
+
+    /* --- Status --- */
+    --sw-success:        #2d8a4e;
+    --sw-danger:         #c0392b;
+    --sw-warning:        #e67e22;
+    --sw-info:           #2980b9;
+
+    /* --- Typography --- */
+    --sw-font-heading:   'Dancing Script', cursive;
+    --sw-font-sub:       'EB Garamond', serif;
+    --sw-font-nav:       'Lustria', serif;
+    --sw-font-body:      'Lato', sans-serif;
+
+    /* --- Effects --- */
+    --sw-radius:         14px;
+    --sw-radius-sm:      8px;
+    --sw-radius-lg:      20px;
+    --sw-transition:     0.2s ease;
+    --sw-shadow:         0 4px 16px rgba(0, 0, 0, 0.4);
+    --sw-shadow-sm:      0 2px 8px rgba(0, 0, 0, 0.3);
+    --sw-glow-gold:      0 0 8px #fed611;
+    --sw-glow-gold-lg:   0 0 18px #fed611, 0 0 4px #ffa133;
+}
