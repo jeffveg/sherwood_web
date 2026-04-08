@@ -40,6 +40,21 @@
     font-display: swap;
 }
 
+/* === SKIP NAV (accessibility) === */
+.skip-nav {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-nav:focus {
+    position: static;
+    width: auto;
+    height: auto;
+}
+
 /* === RESET & BASE === */
 *, *::before, *::after {
     box-sizing: border-box;

@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sherwood Adventure | Mobile Archery Tag Phoenix AZ | Church Groups and Corporate Events</title>
+<title>Sherwood Adventure | Mobile Archery Tag Phoenix AZ</title>
 <meta name="description" content="Sherwood Adventure brings mobile archery tag to your event anywhere in the Phoenix Metro area. Perfect for church groups, corporate team building, parties, and festivals. We come to you — book today!">
 <meta name="keywords" content="archery tag Phoenix, mobile archery tag Arizona, church group activities Phoenix, corporate team building Phoenix, archery tag rental Phoenix, youth group activities Phoenix AZ">
 <meta name="robots" content="index, follow, max-image-preview:large">
@@ -36,6 +36,7 @@
 <!-- Fonts (preload critical) -->
 <link rel="preload" href="css/DancingScript-Bold.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="css/Lustria-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="/images/hero/archery-field.jpg" type="image/jpeg">
 
 <!-- Stylesheet -->
 <link rel="stylesheet" href="css/brand.css">
@@ -92,6 +93,7 @@
 </head>
 
 <body>
+<a href="#main-content" class="skip-nav">Skip to main content</a>
 
 <!-- ═══════════════════════════════════════════════════════
      NAVIGATION
@@ -146,10 +148,21 @@
 </nav>
 
 
+<main id="main-content">
+
 <!-- ═══════════════════════════════════════════════════════
      HERO — Parallax section #1
      ═══════════════════════════════════════════════════════ -->
 <section class="hero parallax" aria-label="Welcome to Sherwood Adventure">
+  <img
+    src="/images/hero/archery-field.jpg"
+    alt="Archery tag players competing on a field in Phoenix AZ"
+    width="1920"
+    height="1080"
+    fetchpriority="high"
+    style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;"
+    aria-hidden="true"
+  >
   <div class="hero-content">
     <picture>
       <source srcset="images/logo.webp" type="image/webp">
@@ -234,7 +247,7 @@
     <div class="btn-wrap">
       <a href="https://schedule.sherwoodadventure.com" target="_blank" rel="noopener noreferrer" class="btn">Book an Adventure</a>
     </div>
-    <p class="trademark-notice">ArcheryTag&reg; and HoverBall&reg; are registered trademarks of <a href="https://archerytag.com" target="_blank" rel="noopener noreferrer">Archery Tag LLC</a>. Sherwood Adventure is a licensed provider.</p>
+    <p class="trademark-notice">ArcheryTag&reg; and HoverBall&reg; are registered trademarks of <a href="https://archerytag.com" target="_blank" rel="nofollow noopener noreferrer">Archery Tag LLC</a>. Sherwood Adventure is a licensed provider.</p>
   </div>
 </section>
 
@@ -378,6 +391,8 @@
 </section>
 
 
+</main>
+
 <!-- ═══════════════════════════════════════════════════════
      FOOTER
      ═══════════════════════════════════════════════════════ -->
@@ -417,6 +432,6 @@
   </div>
 </footer>
 
-<script src="js/main.js"></script>
+<script src="js/main.js" defer></script>
 </body>
 </html>
