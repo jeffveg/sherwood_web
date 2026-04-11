@@ -175,6 +175,8 @@
     <!-- Honeypot spam filter -->
     <input type="text" name="_gotcha" style="display:none">
     <input type="hidden" name="_subject" value="New contact from SherwoodAdventure.com">
+    <!-- Time-based bot check -->
+    <input type="hidden" name="_ts" id="_ts">
 
     <div>
       <button type="submit" class="btn btn-gold">Send Message</button>
@@ -218,5 +220,6 @@
 </footer>
 
 <script src="js/main.js" defer></script>
+<script>document.getElementById('_ts').value = Date.now();</script>
 </body>
 </html>
